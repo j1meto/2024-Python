@@ -4,15 +4,28 @@
 
 import math
 
-print("The circumference of the circle will be outputted as an integer ( rounded to the nearest whole number)")
+import pi
 
-#This program takes an input from the user (the diameter) to calculate the circumference
-#have to convert the input to integer
-diameter = int(input("Enter in the diameter: "))
-#Calm lil calculating statement
-print("Calculating...")
+radius = float(input("Enter in the radius value: "))
 pi = math.pi
-#Variable that holds the value of circumference and makes it an integer
-circumference = int(diameter*pi)
+job = input("Enter in A to calculate area or C to calculate cirumference: ")
 
-print(f"The circumference of the circle is {circumference}")
+if job == "C" or job == "c":
+    print("The circumference of the circle will be outputted as an integer ( rounded to the nearest whole number)")
+
+#This program takes an input from the user (the radius) to calculate the circumference
+#have to convert the input to integer
+    radius = float(input("Enter in the radius: "))
+#Calm lil calculating statement
+    print("Calculating...")
+#Variable that holds the value of circumference and makes it an integer
+    circumference = float(radius*pi*2)
+
+    print(f"The circumference of the circle is {circumference}")
+elif job == "A" or job == "a":
+    print("The formula for the area of a circle is 2pi(radius^2)")
+    area = (pi * (radius*radius))
+    print(area)
+else:
+    print("Re-run the program")
+
